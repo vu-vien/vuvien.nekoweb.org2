@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en,vi">
+<head>
+   <title>vuvien's website</title>
+   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" lang="en" />
+   <meta name="description" content="A stupid website that contains some vuvien's stuff and a TON of random stuff that you never asked for!">
+   <meta name="keywords" content="green,personal,vietnam,aboutme,dark">
+   <meta name="author" content="Vu Vien">
+<meta property="og:image" content="https://vuvien.nekoweb.org/thumbnail.jpg">
+   <link rel="icon" type="image/x-icon" href="https://vuvien.nekoweb.org/finallogo2.svg">
+<link rel="stylesheet" href="https://vuvien.nekoweb.org/two.css">
+<style>
+@media screen and (width <= 600px) {
+	.count {
+		margin:-10px 60px;
+	}
+}
+@media screen and (width >= 800px) {
+	.count {
+		margin:-10px 200px;
+	}
+}
+</style>
+
+
+</head>
+<body onload="show()">
+	<script>
+const dialog = document.getElementById("layout"); 
+
+function show() { 
+  layout.showModal();
+  document.getElementById("loading").style.visibility = "hidden";
+}
+	// time script
+function showTime() {
+    const timeNow = new Date().toLocaleTimeString("en-US");
+    document.getElementById('clock').textContent = timeNow;
+}
+
+setInterval(showTime, 1000);
+function showTime2() {
+    const timeBK = new Date().toLocaleTimeString("en-US",{timeZone:"Asia/Bangkok"});
+    document.getElementById('clock2').textContent = timeBK;
+}
+setInterval(showTime2, 1000);
+	</script>
+	<div id="loading" class="loading">
+		<div class="start2">
+			<h1 style="text-align:center;color:white">Loading up all images...</h1>
+	<button class="start" onclick="show()">Click here to skip loading! :3</button>
+	</div>
+	<noscript style="color:yellow;font-size:130%">[!] Please turn on/enable JavaScript to continue, it is required for this website to load.
+	<img src="https://media.tenor.com/SbJNmUQPznQAAAAj/pleading-cry-power-cry.gif">
+	</noscript>
+</div>
+<img alt="trong dong dong son background" class="rotating" src="https://vuvien.nekoweb.org/trongdong2.png" style ="pointer-events: none;opacity:0.1;position:fixed; z-index:-1; top:-350px" width="1000px" height="1000px">
+
+<dialog id="layout" class="layout" style="overflow:hidden">
+<img class="sticky" src="/images/sticky.png">
+<div id="a" class="tab2">
+  <button type="button" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Home</button>
+  <button type="button" class="tablinks" onclick="openCity(event, 'Paris')">About</button>
+  <button type="button" class="tablinks" onclick="openCity(event, 'Tokyo')">Links</button>
+  <button class="tablinks" onclick="openCity(event, 'Japan')">Gbook</button>
+  <button type="button" class="tablinks" onclick="openCity(event, 'Vietnam')">More</button>
+</div>
+	<img class="bg-sticker" src="https://vuvien.nekoweb.org/finallogo2.svg">
+  <form method="dialog">
+<div id="London" class="tabcontent" style="overflow:auto">
+	<h1 style="visibility:hidden">a</h1>
+	<img style="width:auto;height:20%;display:block;margin:0 auto;" src="/images/welcome2.gif">
+	<p>Thank you so much for visiting! This is my personal website filled with random stuff, it's also the <span id="67">3rd</span> rework hopefully this looks <span id="ee">less boring than <a href="/new">the previous one</a></span>.Anyways, 
+	feel free to <span id="eee">explore!</span>
+	<br><span style="position:relative;top:-8px;">Oh and before you go, could you </span><button class="btn" type="button" onclick="openCity(event, 'Japan')">Sign my guestbook?</button>
+	<br><span style="float:left;position:relative;top:20px" id="txt">Feeling EVlL?  </span> <button id="evil" class="btn" type="button" onclick="myFunction()">NEW!!! Try evil mode</button>
+	</p>
+<iframe class="count" src="//incr.easrng.net/badge?key=-2" style="filter: drop-shadow(0px 0px 2px gray);border-radius:4px;scale:1.75;position:relative;float:right;background: url(//incr.easrng.net/bg.gif);width:88px;height:31px" title="increment badge" width="88px" height="31px" frameborder="0"></iframe>
+
+<div class="box3" style="max-width:470px;display:block;margin-right:auto;margin-left:auto">
+
+<script>
+// music player script
+    const song =
+    document.getElementById('song');
+
+function press() {
+if (document.getElementById("song").paused == true) {
+    document.getElementById("song").play();
+    document.getElementById("play-button").innerHTML =
+      "❚❚";
+  } else if (document.getElementById("song").paused == false) {
+   document.getElementById("song").pause();
+   document.getElementById("play-button").innerHTML =
+      "▶";
+  }
+}
+setInterval(() => {
+  const progressBar = audioPlayer.querySelector(".progress");
+  progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
+  audioPlayer.querySelector(".time .current").textContent = getTimeCodeFromNum(
+    audio.currentTime
+  );
+}, 500);
+</script>
+	<div style="position:relative;top:-9px;left:6px">
+	<img class="music" style="position:relative;top:-5px;border-radius:5px;float:left;width:65px;height:auto" src="/images/album.jpg">
+	<h3 style="font-size:100%;text-align:left;position:relative;left:10px;top:8px">♪ Lotus Waters (Yume2kki)</h3>
+	<p style="font-size:85%;text-align:left;opacity:0.5;position:relative;left:10px;top:-10px">Urotsuki</p>
+	<button type="button" onclick="press()" style="font-size:175%;border: none !important;float:left;left:15px;position:relative;top:-65px;background-color:inherit;color:rgba(255,255,255,0.8);background:inherit" id="play-button">
+		▶</button>
+</div>
+	<audio src="lotuswaters.mp3" id="song">
+	</audio>
+</div>
+<p>Liked the site? <a href="https://nekoweb.org/follow/vuvien.nekoweb.org">Follow on Nekoweb</a></p>
+</div>
+
+
+<div id="Paris" class="tabcontent" style="overflow:auto">
+<h1 id="top" style="visibility:hidden">a</h1>
+<h1 style="font-size:375%;font-family:papyrus;text-align:center">Xin chào!!!</h1>
+<p>I'm vuvien, being known (kinda) on the castle.xyz community.<br>A Vietnamese living in <a href="">Nghe An</a> trying to programming, and just an average grilled meat skewers enjoyer.
+<br>In my free time, i mostly listening to music, make websites & random stuff on castle.xyz for fun, also learn to code & design.Other times, i'm surfing the web or just chatting online.
+<br>I'm NOT a developer nor designer!</p>
+<p style="text-align:center">Viet Nam • GMT+7 • She/Any • 17 • 3/14 π • <img style="position:relative;top:10px;width:45px;height:auto" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/MOREmoji_demigirl.svg"></p>
+<h2 id="likes">Likes</h2>
+<div class="protect">
+<h3>
+<img class="png" src="/images/skewers.png"><span style="position:relative;top:25px;left:20px">Grilled meat skewers</span>
+</h3>
+<br><h3><img class="png" src="/images/cat.png"><span style="position:relative;top:25px;left:20px">Silly things</span></h3>
+<br><h3><img class="png" src="/images/mystery.png"><span style="position:relative;top:25px;left:20px">Mysterious & dark stuff</span></h3>
+<br><h3><img class="png" src="/images/fa.png"><span style="position:relative;top:25px;left:20px">Aero & Skeuomorphism</span></h3>
+<br><h3><img class="png" src="/images/green.png"><span style="position:relative;top:25px;left:20px">Green colours & blue sky</span></h3>
+<br>
+</div>
+<h2 id="dislikes">Dislikes</h2>
+<p>Racism, it's not funny.</p>
+<h2 id="sc">Socials & Contacts</h2>
+<p>Direct messages (DMs) always open! Feel free to chat with me, never ignore your message (if i did im busy, school hours, electricity shutdown or died).
+<br>
+<br>
+<a href="https://castle.xyz/@vuvien"><button type="button" class="btn2"><img class="img2" style="width:40px;height:auto" src="/images/castle2.png"></button></a>
+<a href="https://www.roblox.com/share?code=36ce0c81ac8c3147a28c7afeed547125&type=Profile&source=ProfileShare&stamp=1767019963847"><button type="button" class="btn2"><img class="img2" style="width:40px;height:auto" src="/images/roblox2.png"></button></a>
+<a href="https://github.com/vu-vien"><button type="button" class="btn2"><img class="img2" style="width:40px;height:auto" src="/images/github2.png"></button></a>
+<a href="https://discord.com/users/777798212743856128"><button style="position:relative;" type="button" class="btn2"><img class="img2" style="width:40px;height:auto" src="/images/discord2.png"></button></a>
+<a href="mailto:vuvien1000@gmail.com"><button style="position:relative" type="button" class="btn2"><img class="img2" style="width:40px;height:auto" src="/images/mail2.png"></button></a>
+<h2>Creations</h2>
+<p>I haven't made enough websites yet to show here...And not sure if castle.xyz stuff counts.</p>
+<h2>Branding</h2>
+<p>Because,uhm why not?</p>
+<img class="picture" src="/images/brand.jpg">
+<br>
+<h2 style="margin-block-end:35px" id="faq">FAQ</h2>
+<details>
+	<summary class="faq">What should i call you?</summary>
+	<p class="box">vuvien or vien!
+	<br>[!] Do not call me by my castle account names (xien,xienngusi,no skills...) outside the castle community.The reason is that vuvien is my actual pen name (it's also related to my real name!) and so it should be used to represent me.</p>
+</details>
+<details>
+	<summary class="faq">Are you good at coding/scripting?</summary>
+	<p class="box">Obviously, no.</p>
+</details>
+</div>
+<div id="Tokyo" class="tabcontent" style="overflow:auto">
+  <h1 style="visibility:hidden">Tokyo</h1>
+  <h1>Links</h1>
+  <p>Discover more websites, buttons & stamps.</p>
+  <h2>Link my site</h2>
+  <p>Tap/hover/click on them to get link, thanks in advance!</p>
+  <div class="wrap">
+  	<div class="wrap2">
+  <div class="popup">
+  <img style="width:88px;height:31px" src="https://vuvien.nekoweb.org/vbutton.jpg">
+  <div class="popuptext">
+  <img style="width:88px;height:31px" src="https://vuvien.nekoweb.org/vbutton.jpg">
+  <br>Image link:
+  <br>https://vuvien.nekoweb.org/vbutton.jpg
+  <br>HTML:
+  <br>&lt;a href="https://vuvien.nekoweb.org">&lt;img src="https://vuvien.nekoweb.org/vbutton.jpg">&lt;/a>
+  </div>
+  </div>
+  <div class="popup">
+  <img style="width:88px;height:31px;" src="https://vuvien.nekoweb.org/vbutton2.jpg">
+  <div class="popuptext">
+  <img style="width:88px;height:31px;" src="https://vuvien.nekoweb.org/vbutton2.jpg">
+  <br>Image link:
+  <br>https://vuvien.nekoweb.org/vbutton2.jpg
+  <br>HTML:
+  <br>&lt;a href="https://vuvien.nekoweb.org">&lt;img src="https://vuvien.nekoweb.org/vbutton2.jpg">&lt;/a>
+  </div>
+  </div>
+  </div>
+  </div>
+  <h2>Friend<span style="opacity:0.15">s</span> & Neighbor<span style="opacity:0.15">s</span></h2>
+<div class="wrap">
+	<div class="wrap2">
+<a href="https://wafelz.straw.page/"><img src="wafelz.gif"></a>
+<a href="https://lucastheguy.nekoweb.org/" target="_blank"><img src="https://lucastheguy.nekoweb.org/images/button.gif"></a>
+  </div>
+  </div>
+  <h2>Explore</h2>
+  <p>Personal & handmade websites</p>
+  <div class="wrap">
+  	<div class="wrap2">
+<a class="badge" href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>
+<a class="badge" href="https://duducat.moe/"><img src="https://duducat.moe/index/res/buttons/duducat.svg"></a>
+<a class="badge" href="https://bang1338.nekoweb.org/"><img src="https://bang1338.nekoweb.org/bang1338.gif" style="width: 88px;"></a>
+<a href="https://thinliquid.dev/"><img src="https://thinliquid.dev/buttons/btn.png"></a>
+<a href="https://reduxflakes.nekoweb.org/"><img src="https://reduxflakes.nekoweb.org/public/buttons/reduc_anim.gif"></a>
+<a href="https://daudix.one"><img src="https://daudix.one/badges/badges/daudix.gif"></a>
+<a href="https://jbc.lol"><img src="https://jbc.lol/imgs/buttons/jbtn.svg" alt="jb's site" style="image-rendering: pixelated;"/></a>
+<a href="https://melankorin.net/"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" alt=""></a>
+<a href="https://solinus.neocities.org"><img src="https://solinus.neocities.org/0_imgbrand/Button.png"></a>
+<a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button11.gif"></a>
+<a href="https://blinchik.nekoweb.org/"><img src="https://blinchik.nekoweb.org/img/badge5.png" alt="Blin website" title="Ye"></a>
+<a href="https://mars.nekoweb.org/?button" target="_blank"><img src="https://mars.nekoweb.org/assets/buttons/button0.gif" alt="mars' site" width="88" height="31"></a>
+<a href="http://openbooks.neocities.org"><img src="https://openbooks.neocities.org/img/88x31.gif" height="31" width="88" style="image-rendering:pixelated;"/></a>
+<a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif" alt="petrapixel"></a>
+<a href="https://zenfyr.dev/"><img src="https://zenfyr.dev/88_31/88_31.webp" alt="zenfyr" title="zenfyr"></a>
+<a href="https://yatagarasu.nekoweb.org" target="_blank"><img src="https://yatagarasu.nekoweb.org/images/yatagarasuButtonW.gif" alt="Yatagarasu site button" title="Yatagarasu"></a>
+<a href="https://makoenergy.neocities.org/"><img src="https://makoenergy.neocities.org/images/sitebutton1.gif"></a>
+<a href="https://evehibi.nekoweb.org/"><img src="https://evehibi.nekoweb.org/button1.gif" alt="evehibi"/></a>
+<a href="https://joo.sh/" target="_blank"><img src="https://files.joo.sh/img/buttons/iconinv.gif"></a>
+<a href="https://sheep.nekoweb.org/" target="_blank"><img src="https://sheep.nekoweb.org/assets/mybutton.gif"></a>
+<a href="https://layercake.moe/"><img src="https://layercake.moe/assets/images/buttons/mine/newlyckev2.gif"></a>
+<a href="https://milkbones.nekoweb.org" target="_blank"><img src="https://i.imgur.com/Y1kObgV.gif" alt="milkbones"></a>
+<a href="https://coffeeknife.nekoweb.org"><img src="http://coffeeknife.nekoweb.org/badges/coffeeknife.png" alt="A button with a small purple coffee cup and the text 'coffeknife.nekoweb.org'"></a>
+<a href="https://archi.moe/homepage"><img src="https://archi.moe/images/button.png"></a>
+<a href="https://nomaakip.xyz/"><img src="https://nomaakip.xyz/img/buttons/button.png"></a>
+<a href="https://gifypet.neocities.org/"><img src="https://gifypet.neocities.org/images/badge.gif"></a>
+<a href="https://theabsoluterealm.com/main"><img src="https://theabsoluterealm.com/buttons/absolute-realm.gif"></a>
+</div>
+</div>
+<p>Awesome projects</p>
+<div class="wrap">
+	<div class="wrap2">
+<a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button5.gif"></a><!-- button by max.nekoweb.org -->
+<a href="https://neocities.org"><img src="https://88by31.neocities.org/web/neocities-org.gif"></a>
+<a class="hover" href="https://castle.xyz"><img src="https://vuvien.nekoweb.org/c.gif"></a>
+<a class="hover" href="https://bugdroid.org"><img src="https://bugdroid.org/meta/button-droid-pack.webp"></a>
+<a class="hover" href="https://ytoo.org"><img src="https://ytoo.org/img/ytoo_88x31.gif"></a>
+<a href="https://ioxtv.co/"><img src="https://ioxtv.co/assets/buttons/iox.gif" alt="ioxTV"></a>
+<a href="https://spacehey.com"><img src="https://daudix.one/badges/badges/spacehey.gif"></a>
+<a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+<a href="https://webtiles.kicya.net/"><img src="https://webtiles.kicya.net/t/webtiles.kicya.net/button.png"></a>
+</div>
+</div>
+
+<p>Even more</p>
+<div class="wrap">
+	<div class="wrap2">
+<img src="https://daudix.one/badges/badges/mobilefriendly.gif">
+<img src="https://trafficlunar.net/88x31/responsive.png">
+<img src="https://rknight.me/assets/img/buttons/valid-html5.gif">
+<img src="https://88by31.neocities.org/web/css.gif">
+<img src="https://88by31.neocities.org/web/bestview.gif">
+<img src="https://88by31.neocities.org/web/madewithlove.png">
+<img src="https://88by31.neocities.org/web/svg-8831.svg">
+<img src="https://gemdation.com/media/buttons/powered-by-imagination.gif">
+<img src="https://vuvien.nekoweb.org/8k.png">
+<img src="https://cyber.dabamos.de/88x31/best_chrome.gif">
+<img src="https://galissia.neocities.org/images/buttons/handcoded.gif">
+<img src="https://cyber.dabamos.de/88x31/gmail.gif">
+<img src="https://cyber.dabamos.de/88x31/got_html.gif">
+<img src="https://cyber.dabamos.de/88x31/mslive.gif">
+<img src="https://frutigeraero.org/images/resources/buttons/frutiger_aero_community.png">
+<img src="https://cyber.dabamos.de/88x31/msn.gif">
+<img src="https://cyber.dabamos.de/88x31/no-button.gif">
+<img src="https://cyber.dabamos.de/88x31/nneighborhoodsmall.gif">
+<img src="https://cyber.dabamos.de/88x31/starlocked.gif">
+<img src="https://cyber.dabamos.de/88x31/sucks.gif">
+<img src="https://cyber.dabamos.de/88x31/spotify.gif">
+<img src="https://cyber.dabamos.de/88x31/theoldnet_but.gif">
+<img src="https://cyber.dabamos.de/88x31/thanks-for-looking.gif">
+<img src="https://cyber.dabamos.de/88x31/valid-rss.gif">
+<img src="https://cyber.dabamos.de/88x31/w3schools88x31.gif">
+<img src="https://cyber.dabamos.de/88x31/ytbutton.gif">
+<img src="https://cyber.dabamos.de/88x31/wii.gif">
+<img src="https://cyber.dabamos.de/88x31/wikipedia.gif">
+<img src="https://cyber.dabamos.de/88x31/windows_media_player.gif">
+<img src="https://cyber.dabamos.de/88x31/tor.gif">
+<img src="https://cyber.dabamos.de/88x31/3dot5mmfc-button.gif">
+<img src="https://yesterhost.neocities.org/archive/buttons/button484.gif">
+</div>
+</div>
+<p>I made for fun, planning to make more buttons</p>
+<div class="wrap">
+	<div class="wrap2">
+		<a href="/castlelink"><img class="ad" src="/images/ad.jpg"></a>
+	</div>
+</div>
+<h2>Stamps</h2>
+<p>Trust me this is the best place to put these, i also made some of them.</p>
+<div class="wrap">
+	<div class="wrap2">
+		<img src="https://gifcity.carrd.co/assets/images/gallery61/da67228e.jpg?v=e3c0bc0f">
+		<img src="https://gifcity.carrd.co/assets/images/gallery56/62a58be7.png?v=e3c0bc0f">
+		<img src="https://gifcity.carrd.co/assets/images/gallery55/e45f5cec.png?v=e3c0bc0f">
+		<img src="https://autism.crd.co/assets/images/gallery05/261606bf.png?v=d6547f5c">
+		<img src="https://autism.crd.co/assets/images/gallery05/12d0e126.png?v=d6547f5c">
+		<img src="https://supplies.ju.mp/assets/images/gallery01/564b4b6c.png?v=1c1ba870">
+		<img src="https://supplies.ju.mp/assets/images/gallery01/7b039076.gif?v=1c1ba870">
+		<img src="https://adriansblinkiecollection.neocities.org/stamps/e44.gif">
+		<img src="https://adriansblinkiecollection.neocities.org/stamps/f27.gif">
+		<img src="https://adriansblinkiecollection.neocities.org/stamps/d1.gif">
+		<img src="https://adriansblinkiecollection.neocities.org/stamps/d59.png">
+		<img src="/images/st1.png">
+		<img src="/images/st2.png">
+		<img src="/images/st3.png">
+		<img src="/images/st4.png">
+		<img src="/images/st5.png">
+		<img src="/images/st6.png">
+		<img src="/images/st7.png">
+		<img src="/images/st8.png">
+		<img src="/images/st9.png">
+		<img src="/images/st10.png">
+	</div>
+</div>
+<h2>Webrings</h2>
+<p>I Haven't joined any...</p>
+</div>
+<div id="Japan" class="tabcontent" style="overflow:scroll">
+<iframe src="https://vuvien.atabook.org/" width="100%" height="700px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+</div>
+<div id="Vietnam" class="tabcontent" style="overflow:auto">
+
+	<h1 style="visibility:hidden">a</h1>
+<h1>More stuff</h1>
+<p>Even more stuff, how good...</p>
+<br>
+<details>
+	<summary class="more">Chat box</summary>
+  <iframe style="position:relative;top:5px;border-radius:9px;margin-block-end:15px" src="https://www5.cbox.ws/box/?boxid=960140&boxtag=2N6Goc" width="100%" height="400px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" ></iframe>
+</details>
+<details>
+	<summary class="more">Insanely cool beat drop</summary>
+<iframe name="video" style="top:5px;position:relative;border-radius:9px;margin-block-end:15px;" src="https://ncs.giganttech.net/random-video" width="100%" height="400px" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+<button class="btn" type="button" onclick="refreshIframe()">Reroll video</button>
+<hr>
+<iframe style="top:15px;position:relative;background-color:white;border-radius:9px;margin-block-end:25px;" src="https://ncs.giganttech.net/" width="100%" height="300px" allowtransparency="yes" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+<script>
+// refresh vid
+function refreshIframe() {
+    var ifr = document.getElementsByName('video')[0];
+    ifr.src = ifr.src;
+}
+</script>
+</details>
+<details>
+	<summary class="more">:3</summary>
+	<h1 style="visibility:hidden">a</h1>
+<iframe style="display:block;margin-left:auto;margin-right:auto;scale:1.5;border-radius:10px;position:relative;margin-block-end:90px" width="321px" height="321px" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=:3&dob=1767022556&gender=m&element=Water&pet=https%3A%2F%2Fi.pinimg.com%2F236x%2Fd5%2Fd1%2Fff%2Fd5d1ff934a2bae871316bdfd0074eb01.jpg&map=https%3A%2F%2Ffiles.catbox.moe%2F6hxbzd.jpg&background=&tablecolor=%58482a&textcolor=%58482a" frameborder="0"></iframe>
+</details>
+<details>
+	<summary class="more">Site pages explorer</summary>
+	<a href="/index"><h3>/index</h3></a>
+	<p>Everything in one page</p>
+	<a href="/a-remake"><h3>/a-remake</h3></a>
+	<p>The test version of /index</p>
+	<a href="/crap"><h3>/crap</h3></a>
+	<p>First version of this website</p>
+	<a href="/new"><h3>/new</h3></a>
+	<p>Second version of this website</p>
+	<a href="/castlelink"><h3>/castlelink</h3></a>
+	<p>Castlelink website</p>
+	<a href="/lest"><h3>/lest</h3></a>
+	<p>Gave up website template project</p>
+</details>
+<details>
+	<summary class="more">Gallery</summary>
+	<h3>2021</h3>
+	<p>Unfortunately i lost all of 2022+ pictures.</p>
+		<img style="width:200px" src="/images/pic1.jpg">
+		<img style="width:200px" src="/images/pic2.jpg">
+</details>
+<details>
+	<summary class="more">Boykisser</summary>
+<iframe style="display:block;margin-left:auto;margin-right:auto;border-radius:9px" width="100%" height="400px" src="https://www.youtube.com/embed/Ie57fr8pCko?si=7Pj6DCU5rzOtjfmc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</details>
+<details>
+	<summary class="more">Credits</summary>
+<p>
+	    	[!] For any legal problems, please mail me: <a href="mailto:vuvien1000@gmail.com">vuvien1000@gmail.com</a>
+            <br>The icons, media (images,music...) & site linking buttons are belong to their respective owners/creators
+	    	<br>Social media icons are taken from: Google Play store
+	    	<br>Tabs script: <a href="https://www.w3schools.com/howto/howto_js_tabs.asp">W3Schools</a>
+	    	<br>Hosted by <a href="  ">Nekoweb (mainly)</a> <a href="   ">Neocities (secondary)</a>
+	    	<br>Random video & Random interactive: <a href="https://ncs.giganttech.net/">1</a> & <a href="https://ncs.giganttech.net/videos/">2</a>
+	    	</p>
+</details>
+<script>
+function myFunction() {
+
+document.getElementById("layout").style.filter = "invert(100%)";
+document.getElementById("evil").style.visibility = "hidden";
+document.getElementById("txt").innerHTML = "This is so EVlL mueheheh..."
+document.getElementById("67").innerHTML = "67 six seven"
+document.getElementById("e").innerHTML = "VERY VERY EVlL"
+document.getElementById("ee").innerHTML = "VERY VERY EVlL "
+document.getElementById("eee").innerHTML = "be EVlL"
+}
+</script>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+  </form>
+</dialog>
+</body>
+</html>
