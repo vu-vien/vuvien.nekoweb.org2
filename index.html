@@ -8,17 +8,470 @@
    <meta name="author" content="Vu Vien">
 <meta property="og:image" content="https://vuvien.nekoweb.org/thumbnail.jpg">
    <link rel="icon" type="image/x-icon" href="https://vuvien.nekoweb.org/finallogo2.svg">
-<link rel="stylesheet" href="https://vuvien.nekoweb.org/two.css">
+<meta name="theme-color" content="#00be91" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#00be91">
 <style>
-@media screen and (width <= 600px) {
-	.count {
-		margin:-10px 60px;
-	}
+.count {
+	position: relative;
+	bottom:20px;
+	right:40px;
 }
-@media screen and (width >= 800px) {
-	.count {
-		margin:-10px 200px;
+/* Makes the tap highlight invisible for all elements */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+@font-face { 
+	font-family: segoeui; 
+	src: url('https://vuvien.nekoweb.org/segoeuithis.ttf'); 
+}
+@font-face { 
+	font-family: papyrus; 
+	src: url('https://vuvien.nekoweb.org/papyrus.ttf');
 	}
+html {
+  background-color: black;
+  background: url('https://vuvien.nekoweb.org/bg.jpg');
+  background-color:#000000 ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+	color: black;
+	font-family: segoeui;
+}
+button {
+	font-family: segoeui;
+}
+.layout {
+width:90%;
+height: 650px;
+max-width:800px;
+background-color: #f1e9d2;
+border-radius:17.5px;
+-webkit-animation: fadeEffect3 0.25s;
+animation: fadeEffect3 0.25s;
+scrollbar-color: #009a98 #000000;
+}
+.tab2 {
+	font-family: segoeui;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+  width:93.5%;
+  border-radius:10px;
+  background: rgba(241,233,210,0.3);
+  box-shadow: #f1e9d2 0px 0px 30px 30px;
+}
+
+/* Style the buttons inside the tab */
+.tab2 button {
+  outline: none;
+  float: left;
+  border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  background:inherit;
+  border-radius: 9px;
+	color:rgba(88,72,42,1);
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+background-image:linear-gradient(#39db90,#00be91,#009a98);
+color: rgba(255,255,255,0.75)
+}
+.tabcontent {
+	display: block;
+	margin-left:auto ;
+	margin-right: auto;
+  display: none;
+  -webkit-animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
+  height: 650px;
+  position: relative;
+  border-radius: 5px;
+  width: 99%;
+  z-index: 1;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;scale:0.95;filter: blur(20px) invert(100%);}
+  to {opacity: 1;scale:1;filter:blur(0px) invert(0%);}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;scale:0.95;filter: blur(20px);}
+  to {opacity: 1;scale:1;filter:blur(0px);}
+}
+@-webkit-keyframes fadeEffect2 {
+  from {opacity: 1;scale:1;filter: blur(20px) saturate(3);}
+  to {opacity: 1;scale:1;filter:blur(0px) saturate(1);}
+}
+
+@keyframes fadeEffect2 {
+  from {opacity: 0;scale:1;filter: blur(20px) saturate(3);}
+  to {opacity: 1;scale:1;filter:blur(0px) saturate(1);}
+}
+@-webkit-keyframes fadeEffect3 {
+  from {opacity: 0;scale:0.9;filter: blur(20px);}
+  to {opacity: 1;scale:1;filter:blur(0px);}
+}
+
+@keyframes fadeEffect3 {
+  from {opacity: 1;scale:0.9;filter: blur(20px);}
+  to {opacity: 1;scale:1;filter:blur(0px);}
+}
+
+summary::marker {
+	content:' + ';
+}
+details[open] summary::marker {
+	content:' ↑ Close • ';
+	opacity: 0.75;
+}
+.box {
+      border: 2px solid rgba(88,72,42,0.25);
+	    box-shadow: rgba(88,72,42,0.1) 0px 1px 10px 2px inset;
+	    margin: 10px;
+	    border-radius: 7px;
+	    padding: 10px 15px;
+      margin-block-start: 15px;
+	    margin-bottom: 30px;
+      -webkit-animation: fadeEffect 0.5s;
+      animation: fadeEffect 0.5s;
+}
+.box2 {
+      border: 2px solid rgba(88,72,42,0.25);
+	    box-shadow: rgba(88,72,42,0.1) 0px 1px 10px 2px inset;
+	    border-radius: 7px;
+	    padding: 10px 10px;
+      height:10px;
+      margin-inline-start: 100px;
+}
+.box3 {
+      border: 2px solid rgba(88,72,42,0.25);
+	    box-shadow: rgba(88,72,42,0.1) 0px 1px 10px 2px inset;
+	    border-radius: 7px;
+	    padding: 10px 10px;
+      height:70px;
+}
+.btn {
+padding:15px 30px;
+	color:rgba(88,72,42,1);
+	border: none;
+    box-shadow: rgba(88, 72, 42, 0.175) 0px 0px 10px 2px;
+	border-radius: 7px;
+	margin-inline: 10px;
+	margin-block-start: 15px;
+	transition:0.3s ;
+	position: relative;
+	top:-7px;
+	background: inherit;
+border-block-end: 4px solid rgba(88,72,42,0.25);
+}
+.btn:hover {
+	background:linear-gradient(#009a98,#00be91,#39db90);
+    color: rgba(255,255,255,0.8);
+    font-size:110%;
+	border-block-end: 0px solid rgba(88,72,42,0.5);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 5px inset;
+}
+.faq {
+padding:15px 30px;
+    box-shadow: rgba(88, 72, 42, 0.175) 0px 0px 10px 2px;
+	color:rgba(88,72,42,1);
+	border: none;
+border-block-end: 4px solid rgba(88,72,42,0.25);
+	border-radius: 7px;
+	margin-inline: 10px;
+	margin-block-start: 15px;
+	transition:0.3s ;
+	position: relative;
+	top:-7px;
+}
+.faq:hover {
+	background:linear-gradient(#009a98,#00be91,#39db90);
+    box-shadow: rgba(0, 61, 47, 0.175) 0px 0px 0px 0px;
+    color: rgba(255,255,255,0.8);
+    font-size:110%;
+	border-block-end: 0px solid rgba(88,72,42,0.5);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 5px inset;
+}
+.btn2 {
+    padding:15px 0px;
+    box-shadow: rgba(88, 72, 42, 0.175) 0px 0px 10px 2px;
+	border: none;
+  border-block-end: 4px solid rgba(88,72,42,0.25);
+	border-radius: 7px;
+	margin-inline: 10px;
+	margin-block-start: 15px;
+	transition:0.3s ;
+	position: relative;
+	top:-7px;
+	background: inherit;
+	width:75px;
+	height:75px;
+	color:rgba(88,72,42,1);
+}
+.btn2:hover {
+	background:linear-gradient(#009a98,#00be91,#39db90);
+    box-shadow: rgba(0, 61, 47, 0.175) 0px 0px 0px 0px;
+    color: rgba(255,255,255,0.8);
+    font-size:110%;
+	border-block-end: 0px solid rgba(88,72,42,0.5);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 5px inset;
+}
+
+.img2:hover {
+	transition: 0.4s;
+	filter:invert(100%);
+	opacity: 0.5;
+}
+a {
+	text-decoration: none;
+}
+.bg-sticker {
+	position: absolute;
+	z-index: 0;
+	opacity: 0.1;
+	rotate: -30deg;
+	width:400px;
+	height: auto;
+	filter: grayscale(100%);
+	top: 275px;
+	left:150px;
+	pointer-events: none;
+}
+.hover:hover {
+	scale: 1.3;
+	transition: 0.3s;
+}
+@-webkit-keyframes rotating /* rotating background */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 30s linear infinite;
+  -moz-animation: rotating 30s linear infinite;
+  -ms-animation: rotating 30s linear infinite;
+  -o-animation: rotating 30s linear infinite;
+  animation: rotating 30s linear infinite;
+  z-index: -1;
+  filter:grayscale(100%);
+}
+.loading {
+  text-align: center;
+  margin:30px;
+}
+.more {
+	padding: 15px 15px;
+	border: 2px solid rgba(88,72,42,0.25);
+	border-radius: 9px;
+	text-align: center;
+	margin-block-end: 15px;
+    box-shadow: rgba(255, 255, 255, 0.175) 0px 0px 10px 2px inset;
+}
+hr {
+	border:1px dashed rgba(88,72,42,0.25);
+}
+h1 {
+	color:rgba(88,72,42,1);
+	font-size: 250%;
+	transition: 0.2s;
+}
+h1:hover {
+	color: #009a98;
+}
+h2 {
+	color:rgba(88,72,42,1);
+	transition: 0.2s;
+}
+h2:hover {
+	color: #009a98;
+}
+h3 {
+	color:rgba(88,72,42,1);
+}
+p {
+	color:rgba(88,72,42,0.8);
+}
+details {
+	color:rgba(88,72,42,1);
+}
+.png {
+	width:75px;
+	height: auto;
+	transition: 0.3s;
+	margin-inline-start: 10px;
+}
+.png:hover {
+	scale: 1.5;
+}
+.start {
+	position: relative;
+	top: 200px;
+	padding: 20px 40px;
+	border: 2px solid white;
+	border-radius: 9px;
+	background: inherit;
+	color:white;
+	font-size: 140%;
+}
+a {
+	text-decoration: none;
+	color:#009a98;
+}
+.picture {
+	border: 10px solid white;
+    box-shadow: rgba(0,0,0, 0.25) 0px 4px 10px 2px;
+    height:auto;
+    width: 475px;
+    display: block;
+    margin: 0 auto;
+}
+.popup {
+  display: inline-block;
+  cursor: pointer;
+  margin-inline-end: 3.5px;
+  transition: 0.4s;
+}
+.popuptext {
+backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  visibility: hidden;
+  width: auto;
+  background-color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.9);
+  text-align: left;
+  border-radius: 9px;
+  position: absolute;
+  padding: 10px 10px;
+  z-index: 10;
+  top: -30px;
+  left: 0px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 5px;
+border: 2px solid rgba(255,255,255,0.5);
+line-break: everywhere;
+}
+
+.popuptext::after {
+
+  position: absolute;
+  margin-top: -5px;
+}
+
+.popup:hover .popuptext {
+  visibility: visible;
+      -webkit-animation: fadeEffect 0.5s;
+      animation: fadeEffect 0.5s;
+}
+.wrap {
+	padding: 10px 10px;
+	border: 2px dashed rgba(88,72,42,0.25);
+	border-radius: 7px;
+}
+.wrap2 {
+	position: relative;
+	top: 2.5px;
+}
+.protect {
+    pointer-events: none;
+}
+.sticky {
+	rotate: -15deg;
+	border-radius: 7px;
+	width:110px;
+	height: auto;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	z-index: 100;
+    filter: drop-shadow(-2px 2px 10px rgba(0,0,0,0.25));
+    transition: 0.3s;
+pointer-events: none;
+}
+.ad {
+	position: relative;
+	width: 400px;
+	height: auto;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius: 4px;
+	top: -2px;
+}
+.music {
+	transition: 0.3s;
+}
+.music:hover {
+	filter: blur(10px);
+}
+.box5 {
+	background: #f1e9d2;
+	border-radius: 10px;
+	padding: 10px 10px;
+	box-shadow: rgba(88,72,42,0.25) 0px 5px 7px 0px;
+	margin: 10px;
+	border: 2px solid rgba(88,72,42,0.1);
+	max-width: 470px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.inbox {
+	margin: 10px;
+}
+.time {
+	background-color: black;
+	color:#00ff00;
+	padding: 4px 5px;
+	border-radius: 7px;
+	font-family: Monospace;
+}
+.game {
+	border-radius: 9px;
+	transition: 0.3s;
+}
+.game:hover {
+box-shadow: rgba(88,72,42,0.75) 0px 5px 7px 2px;
+margin: 10px;
+z-index: 10;
 }
 </style>
 
@@ -57,27 +510,31 @@ setInterval(showTime2, 1000);
 <img alt="trong dong dong son background" class="rotating" src="https://vuvien.nekoweb.org/trongdong2.png" style ="pointer-events: none;opacity:0.1;position:fixed; z-index:-1; top:-350px" width="1000px" height="1000px">
 
 <dialog id="layout" class="layout" style="overflow:hidden">
-<img class="sticky" src="/images/sticky.png">
+<img class="sticky" src="/images/sticker2.png">
 <div id="a" class="tab2">
-  <button type="button" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Home</button>
-  <button type="button" class="tablinks" onclick="openCity(event, 'Paris')">About</button>
+  <button type="button" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">•</button>
+  <button type="button" class="tablinks" onclick="openCity(event, 'Paris')">About me</button>
   <button type="button" class="tablinks" onclick="openCity(event, 'Tokyo')">Links</button>
   <button class="tablinks" onclick="openCity(event, 'Japan')">Gbook</button>
   <button type="button" class="tablinks" onclick="openCity(event, 'Vietnam')">More</button>
 </div>
-	<img class="bg-sticker" src="https://vuvien.nekoweb.org/finallogo2.svg">
+	<img class="bg-sticker" src="https://images.emojiterra.com/twitter/512px/1f62d.png">
   <form method="dialog">
 <div id="London" class="tabcontent" style="overflow:auto">
-	<h1 style="visibility:hidden">a</h1>
-	<img style="width:auto;height:20%;display:block;margin:0 auto;" src="/images/welcome2.gif">
-	<p>Thank you so much for visiting! This is my personal website filled with random stuff, it's also the <span id="67">3rd</span> rework hopefully this looks <span id="ee">less boring than <a href="/new">the previous one</a></span>.Anyways, 
-	feel free to <span id="eee">explore!</span>
-	<br><span style="position:relative;top:-8px;">Oh and before you go, could you </span><button class="btn" type="button" onclick="openCity(event, 'Japan')">Sign my guestbook?</button>
-	<br><span style="float:left;position:relative;top:20px" id="txt">Feeling EVlL?  </span> <button id="evil" class="btn" type="button" onclick="myFunction()">NEW!!! Try evil mode</button>
-	</p>
-<iframe class="count" src="//incr.easrng.net/badge?key=-2" style="filter: drop-shadow(0px 0px 2px gray);border-radius:4px;scale:1.75;position:relative;float:right;background: url(//incr.easrng.net/bg.gif);width:88px;height:31px" title="increment badge" width="88px" height="31px" frameborder="0"></iframe>
+	<h5 style="visibility:hidden">a</h5>
+	<img style="width:160px;height:auto;position:relative;margin-left:35px" src="/images/tutorial.gif">
 
-<div class="box3" style="max-width:470px;display:block;margin-right:auto;margin-left:auto">
+	<img style="width:auto;height:20%;display:block;margin:0 auto;" src="/images/welcome2.gif">
+	<p>Your <span class="time" id="clock"></span> is my <span class="time" id="clock2"></span></p>
+	<p>Thank you so much for visiting! This is where i'm (vuvien) telling about myself and more random stuff.
+	<br><span style="position:relative;top:-8px;">Before you leave, would you </span><button class="btn" type="button" onclick="openCity(event, 'Japan')">Leave a message?</button>
+	<br><span style="float:left;position:relative;top:20px" id="txt">Feeling EVlL?  </span> <button id="evil" class="btn" type="button" onclick="myFunction()">Try evil mode</button>
+	</p>
+
+<div class="box5" style="max-width:470px;display:block;margin-right:auto;margin-left:auto">
+<iframe class="count" src="//incr.easrng.net/badge?key=-2" style="z-index:10;filter: drop-shadow(0px 0px 2px gray);border-radius:4px;scale:1.75;position:relative;float:right;background: url(//incr.easrng.net/bg.gif);width:88px;height:31px" title="increment badge" width="88px" height="31px" frameborder="0"></iframe>
+
+	<img style="width:125px;height:auto;position:relative;top:30px;left:75px;float: right" src="/images/goal.gif">
 
 <script>
 // music player script
@@ -103,40 +560,79 @@ setInterval(() => {
   );
 }, 500);
 </script>
-	<div style="position:relative;top:-9px;left:6px">
+	<div style="position:relative;bottom:1px;left:11px">
 	<img class="music" style="position:relative;top:-5px;border-radius:5px;float:left;width:65px;height:auto" src="/images/album.jpg">
 	<h3 style="font-size:100%;text-align:left;position:relative;left:10px;top:8px">♪ Lotus Waters (Yume2kki)</h3>
 	<p style="font-size:85%;text-align:left;opacity:0.5;position:relative;left:10px;top:-10px">Urotsuki</p>
 	<button type="button" onclick="press()" style="font-size:175%;border: none !important;float:left;left:15px;position:relative;top:-65px;background-color:inherit;color:rgba(255,255,255,0.8);background:inherit" id="play-button">
 		▶</button>
+
 </div>
 	<audio src="lotuswaters.mp3" id="song">
 	</audio>
 </div>
-<p>Liked the site? <a href="https://nekoweb.org/follow/vuvien.nekoweb.org">Follow on Nekoweb</a></p>
+<script>
+let domain = "vuvien.nekoweb.org"; // <<<--- Insert your domain here!
+
+(async () => {
+  try {
+    const request = await fetch(`https://nekoweb.org/api/site/info/${domain}`);
+    const json = await request.json();
+
+    const updated = new Date(json.updated_at).toLocaleDateString(); // Formats Last Updated text
+    const created = new Date(json.created_at).toLocaleDateString(); // Formats Creation Date text
+
+    if (document.getElementById("created"))
+      document.getElementById("created").innerHTML =
+        `${created}`;
+    if (document.getElementById("updated"))
+      document.getElementById("updated").innerHTML =
+        `${updated}`;
+    if (document.getElementById("visitors"))
+      document.getElementById("visitors").innerHTML =
+        `${json.views}`;
+    if (document.getElementById("followers"))
+      document.getElementById("followers").innerHTML =
+        `${json.followers}`;
+  } catch (error) {
+    console.error(error);
+    // If you wish to insert some fallback here, you may do so!
+  }
+})();
+</script>
+<div class="box5">
+	<a href="https://nekoweb.org/follow/vuvien.nekoweb.org"><button type="button" style="float:right;margin-right:6px" class="btn">[+] Follow on Nekoweb</button></a>
+
+	<p class="inbox">
+		Last updated: <span id="updated">Fetching...</span>
+		<br>Views: <span id="visitors">Loading...</span>
+	</p>
+</div>
 </div>
 
 
 <div id="Paris" class="tabcontent" style="overflow:auto">
 <h1 id="top" style="visibility:hidden">a</h1>
-<h1 style="font-size:375%;font-family:papyrus;text-align:center">Xin chào!!!</h1>
-<p>I'm vuvien, being known (kinda) on the castle.xyz community.<br>A Vietnamese living in <a href="">Nghe An</a> trying to programming, and just an average grilled meat skewers enjoyer.
+<h1 style="line-height:4px;font-size:375%;font-family:papyrus;text-align:center">Xin chào!!!</h1>
+<p>I'm vuvien, being known (kinda) on the castle.xyz community.<br>A Vietnamese living in <a href="https://vi.wikipedia.org/wiki/Ngh%E1%BB%87_An">Nghe An</a> trying to programming, and just an average grilled meat skewers enjoyer.
 <br>In my free time, i mostly listening to music, make websites & random stuff on castle.xyz for fun, also learn to code & design.Other times, i'm surfing the web or just chatting online.
-<br>I'm NOT a developer nor designer!</p>
-<p style="text-align:center">Viet Nam • GMT+7 • She/Any • 17 • 3/14 π • <img style="position:relative;top:10px;width:45px;height:auto" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/MOREmoji_demigirl.svg"></p>
+<br>I'm <strong>NOT</strong> a developer nor designer!</p>
+<p style="text-align:center">Viet Nam • GMT+7 • She/Any • 17 • 3/14 • <img style="position:relative;top:10px;width:45px;height:auto" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/MOREmoji_demigirl.svg"></p>
 <h2 id="likes">Likes</h2>
-<div class="protect">
-<h3>
-<img class="png" src="/images/skewers.png"><span style="position:relative;top:25px;left:20px">Grilled meat skewers</span>
-</h3>
-<br><h3><img class="png" src="/images/cat.png"><span style="position:relative;top:25px;left:20px">Silly things</span></h3>
-<br><h3><img class="png" src="/images/mystery.png"><span style="position:relative;top:25px;left:20px">Mysterious & dark stuff</span></h3>
-<br><h3><img class="png" src="/images/fa.png"><span style="position:relative;top:25px;left:20px">Aero & Skeuomorphism</span></h3>
-<br><h3><img class="png" src="/images/green.png"><span style="position:relative;top:25px;left:20px">Green colours & blue sky</span></h3>
-<br>
-</div>
-<h2 id="dislikes">Dislikes</h2>
-<p>Racism, it's not funny.</p>
+<img class="png" src="/images/skewers.png">
+<img class="png" src="/images/cat.png">
+<img class="png" src="/images/mystery.png">
+<img class="png" src="/images/fa.png">
+<img class="png" src="/images/green.png">
+<h2>Games i liked</h2>
+<img style="width:100px;height:auto" class="game" src="/images/g1.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g5.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g3.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g4.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g7.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g2.jpg">
+<img style="width:100px;height:auto" class="game" src="/images/g6.jpg">
+
 <h2 id="sc">Socials & Contacts</h2>
 <p>Direct messages (DMs) always open! Feel free to chat with me, never ignore your message (if i did im busy, school hours, electricity shutdown or died).
 <br>
@@ -172,6 +668,16 @@ setInterval(() => {
   <div class="wrap">
   	<div class="wrap2">
   <div class="popup">
+  <img style="width:88px;height:31px" src="https://vuvien.nekoweb.org/vbutton3.png">
+  <div class="popuptext">
+  <img style="width:88px;height:31px" src="https://vuvien.nekoweb.org/vbutton3.png">
+  <br>Image link:
+  <br>https://vuvien.nekoweb.org/vbutton3.jpg
+  <br>HTML:
+  <br>&lt;a href="https://vuvien.nekoweb.org">&lt;img src="https://vuvien.nekoweb.org/vbutton3.png">&lt;/a>
+  </div>
+  </div>
+  <div class="popup">
   <img style="width:88px;height:31px" src="https://vuvien.nekoweb.org/vbutton.jpg">
   <div class="popuptext">
   <img style="width:88px;height:31px" src="https://vuvien.nekoweb.org/vbutton.jpg">
@@ -191,13 +697,24 @@ setInterval(() => {
   <br>&lt;a href="https://vuvien.nekoweb.org">&lt;img src="https://vuvien.nekoweb.org/vbutton2.jpg">&lt;/a>
   </div>
   </div>
+  <div class="popup">
+  <img style="width:88px;height:31px;" src="https://vuvien.nekoweb.org/vbutton.gif">
+  <div class="popuptext">
+  <img style="width:88px;height:31px;" src="https://vuvien.nekoweb.org/vbutton.gif">
+  <br>GIF link:
+  <br>https://vuvien.nekoweb.org/vbutton.gif
+  <br>HTML:
+  <br>&lt;a href="https://vuvien.nekoweb.org">&lt;img src="https://vuvien.nekoweb.org/vbutton.gif">&lt;/a>
   </div>
   </div>
-  <h2>Friend<span style="opacity:0.15">s</span> & Neighbor<span style="opacity:0.15">s</span></h2>
+  </div>
+  </div>
+  <h2>Friend<span style="opacity:0.15">s</span> & Neighbors</h2>
 <div class="wrap">
 	<div class="wrap2">
 <a href="https://wafelz.straw.page/"><img src="wafelz.gif"></a>
 <a href="https://lucastheguy.nekoweb.org/" target="_blank"><img src="https://lucastheguy.nekoweb.org/images/button.gif"></a>
+<a href="https://ioxtv.co/"><img src="https://ioxtv.co/assets/buttons/iox.gif" alt="ioxTV"></a>
   </div>
   </div>
   <h2>Explore</h2>
@@ -216,6 +733,7 @@ setInterval(() => {
 <a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button11.gif"></a>
 <a href="https://blinchik.nekoweb.org/"><img src="https://blinchik.nekoweb.org/img/badge5.png" alt="Blin website" title="Ye"></a>
 <a href="https://mars.nekoweb.org/?button" target="_blank"><img src="https://mars.nekoweb.org/assets/buttons/button0.gif" alt="mars' site" width="88" height="31"></a>
+<a href="applecider.nekoweb.org"><img src="https://i.ibb.co/LX3Tsp5G/button.png" alt="applecider's button"></a>
 <a href="http://openbooks.neocities.org"><img src="https://openbooks.neocities.org/img/88x31.gif" height="31" width="88" style="image-rendering:pixelated;"/></a>
 <a href="https://petrapixel.neocities.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/petracoding/petrapixel.neocities.org@latest/public/assets/img/linkback.gif" alt="petrapixel"></a>
 <a href="https://zenfyr.dev/"><img src="https://zenfyr.dev/88_31/88_31.webp" alt="zenfyr" title="zenfyr"></a>
@@ -228,6 +746,7 @@ setInterval(() => {
 <a href="https://milkbones.nekoweb.org" target="_blank"><img src="https://i.imgur.com/Y1kObgV.gif" alt="milkbones"></a>
 <a href="https://coffeeknife.nekoweb.org"><img src="http://coffeeknife.nekoweb.org/badges/coffeeknife.png" alt="A button with a small purple coffee cup and the text 'coffeknife.nekoweb.org'"></a>
 <a href="https://archi.moe/homepage"><img src="https://archi.moe/images/button.png"></a>
+<a href="https://lobie5.nekoweb.org"><img src="https://lobie5.nekoweb.org/images/collections/buttons/lobie5button(1).png" alt="Lobie5"></a>
 <a href="https://nomaakip.xyz/"><img src="https://nomaakip.xyz/img/buttons/button.png"></a>
 <a href="https://gifypet.neocities.org/"><img src="https://gifypet.neocities.org/images/badge.gif"></a>
 <a href="https://theabsoluterealm.com/main"><img src="https://theabsoluterealm.com/buttons/absolute-realm.gif"></a>
@@ -243,8 +762,9 @@ setInterval(() => {
 <a class="hover" href="https://ytoo.org"><img src="https://ytoo.org/img/ytoo_88x31.gif"></a>
 <a href="https://ioxtv.co/"><img src="https://ioxtv.co/assets/buttons/iox.gif" alt="ioxTV"></a>
 <a href="https://spacehey.com"><img src="https://daudix.one/badges/badges/spacehey.gif"></a>
+<a href="https://atabook.org"><img src="https://ioxtv.co/assets/buttons/links/atabook.gif"></a>
 <a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-<a href="https://webtiles.kicya.net/"><img src="https://webtiles.kicya.net/t/webtiles.kicya.net/button.png"></a>
+<a href="https://webtiles.kicya.net/"><img src="https://ioxtv.co/assets/buttons/links/webtiles.gif"></a>
 </div>
 </div>
 
@@ -285,10 +805,9 @@ setInterval(() => {
 <img src="https://yesterhost.neocities.org/archive/buttons/button484.gif">
 </div>
 </div>
-<p>I made for fun, planning to make more buttons</p>
+<p>Placeholder for smth coming soon</p>
 <div class="wrap">
 	<div class="wrap2">
-		<a href="/castlelink"><img class="ad" src="/images/ad.jpg"></a>
 	</div>
 </div>
 <h2>Stamps</h2>
